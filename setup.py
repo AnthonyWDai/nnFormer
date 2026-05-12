@@ -17,7 +17,9 @@ setup(name='nnformer',
             "requests",
             "nibabel", 
             "matplotlib",
-            'tifffile'
+            'tifffile',
+            "einops",
+            "timm==0.4.9"
       ],
       entry_points={
           'console_scripts': [
