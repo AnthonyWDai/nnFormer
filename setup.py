@@ -9,13 +9,15 @@ setup(name='nnformer',
             "scikit-image>=0.14",
             "medpy",
             "scipy",
-            "batchgenerators>=0.21",
+            "batchgenerators==0.21",
             "numpy",
-            "sklearn",
+            "scikit-learn",
             "SimpleITK",
             "pandas",
             "requests",
-            "nibabel", 'tifffile'
+            "nibabel", 
+            "matplotlib",
+            'tifffile'
       ],
       entry_points={
           'console_scripts': [
