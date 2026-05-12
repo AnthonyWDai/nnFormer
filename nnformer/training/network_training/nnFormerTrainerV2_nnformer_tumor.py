@@ -176,7 +176,7 @@ class nnFormerTrainerV2_nnformer_tumor(nnFormerTrainer):
                                 window_size=self.window_size,
                                 deep_supervision=self.deep_supervision)
         if self.load_pretrain_weight:
-            checkpoint = torch.load("/home/xychen/jsguo/weight/tumor_pretrain.model", map_location='cpu')
+            checkpoint = torch.load("/home/xychen/jsguo/weight/tumor_pretrain.model", map_location='cpu', weights_only=False)
             ck={}
             
             for i in self.network.state_dict():

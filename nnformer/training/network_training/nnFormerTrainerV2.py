@@ -445,3 +445,24 @@ class nnFormerTrainerV2(nnFormerTrainer):
         ret = super().run_training()
         self.network.do_ds = ds
         return ret
+
+
+class nnFormerTrainerV2Lr5e3(nnFormerTrainerV2):
+    def __init__(self, plans: dict, configuration: str, fold: int, dataset_json: dict, unpack_dataset: bool = True,
+                 device: torch.device = torch.device('cuda')):
+        super().__init__(plans, configuration, fold, dataset_json, unpack_dataset, device)
+        self.initial_lr = 5e-3
+        
+        
+class nnFormerTrainerV2Lr1e3(nnFormerTrainerV2):
+    def __init__(self, plans: dict, configuration: str, fold: int, dataset_json: dict, unpack_dataset: bool = True,
+                 device: torch.device = torch.device('cuda')):
+        super().__init__(plans, configuration, fold, dataset_json, unpack_dataset, device)
+        self.initial_lr = 1e-3
+        
+
+class nnFormerTrainerV2Lr5e4(nnFormerTrainerV2):
+    def __init__(self, plans: dict, configuration: str, fold: int, dataset_json: dict, unpack_dataset: bool = True,
+                 device: torch.device = torch.device('cuda')):
+        super().__init__(plans, configuration, fold, dataset_json, unpack_dataset, device)
+        self.initial_lr = 5e-4
